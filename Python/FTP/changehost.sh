@@ -1,0 +1,3 @@
+#sh
+HostsText="127.0.0.1 registration.parallels.com\n127.0.0.1 webservices.pdfm9.parallels.com\n127.0.0.1 account.parallels.com\n127.0.0.1 pdfm.blist.parallels.com\n127.0.0.1 pdfm.vl.parallels.com\n127.0.0.1 update.parallels.com\n127.0.0.1 cepreport.pdfm9.parallels.com\n127.0.0.1 report.parallels.com\n127.0.0.1 blist.parallels.com\n127.0.0.1 blist.pdfm9.parallels.com";
+echo "$HostsText" >> /etc/hosts

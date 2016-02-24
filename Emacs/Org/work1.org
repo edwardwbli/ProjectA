@@ -1,0 +1,7 @@
+** INFO 
+
+*** Emacs read me
+**** Emacs initialization file init.el in ~/.emacs.d/init.el
+
+*** Python Read me
+**** GameBattleship.py for playing.

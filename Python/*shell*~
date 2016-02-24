@@ -1,0 +1,448 @@
+bash-3.2$ ls
+GameBattleship.py	GameBattleship.py~	Guess.py
+bash-3.2$ python Guess.py 
+Your guess: 1
+Your guess: 2
+Your guess: 3
+You lose.
+bash-3.2$ python test.py
+Your choice: 1
+No choice
+bash-3.2$ python test.py 
+Your choice: sex
+sex
+No choice
+bash-3.2$ Mask.py
+bash: Mask.py: command not found
+bash-3.2$ python Mask.py
+*** ju ***
+bash-3.2$ python Mask.py
+Your text: My name is Edward wei bin li
+What to mask: wei
+bash-3.2$ python mask.py
+Your text: My name is wei bin li
+What to mask: bin
+bash-3.2$ python Mask.py
+Your text: My name is wei bin li
+What to mask: bin
+bash-3.2$ python Mask.py
+Your text: Wei bin Li
+What to mask: binhex 
+Wei *** Li
+bash-3.2$ python Mask.py
+Your text: wei bin li
+What to mask: li
+wei bin **
+bash-3.2$ binhex 
+binhex 1.0 - Nov 22 2013 20:25:26
+Copyright 2005-2008, 2010-2012 Apple Inc.
+
+Usage: binhex <verb> <options> file1 file2 ...
+perform BinHex decoding and encoding.
+
+Verbs:
+    probe                   Indicates that probe is requested.
+    encode                  Indicates encoding is requested.
+    decode                  [optional] Indicates that decode is requested.
+
+    If no verb is specified, "decode" is assumed.
+
+General Options:
+    -h, --help               display this usage statement and exit.
+    -V, --version            display version of binhex,
+    -v, --verbose            display verbose output.
+
+Probing Options:
+    This will return 0 if file specified is BinHex.
+
+Encoding Options:
+    -R, --no-runlength-encoding
+                             [optional] don't generate compressed BinHex file.
+    -s, --suffix [suffix]    [optional] suffix to use instead of 'hqx'.
+    -p, --pipe, --stdout     [optional] pipe encoded output to standard output.
+    -C, --directory (dir)    [optional] save encoded file in specified
+                             directory.
+    -o, --rename (file)      [optional] specifies name for output file instead
+                             of instead of using input filename with suffix.
+                             No suffix is applied to (file).
+    -n, --overwrite          [optional] overwrite output file if it exists.
+
+Decoding Options:
+    -p, --pipe, --stdin      [optional] decode data piped from standard input.
+    -C, --directory (dir)    [optional] save encoded file in specified
+                             directory.
+    -o, --rename (file)      [optional] specifies name for output file instead
+                             of instead of using input filename with suffix.
+    -n, --overwrite          [optional] overwrite output file if it exists.
+bash-3.2$ python Mask.py
+Your text: Edward wei bli wei lil
+What to mask: wei
+Edward *** bli *** lil
+bash-3.2$ python Mask.py
+Your text: Edward wei bli wei lil
+What to mask: li
+Edward wei bli wei lil
+bash-3.2$ python Mask.py
+Your text: edward wei bin wei bin li
+What to mask: wei
+edward *** bin *** bin li
+bash-3.2$ python
+Python 2.7.5 (default, Mar  9 2014, 22:15:05) 
+[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 3 % 2
+3 % 2
+1
+>>> 7 % 3
+7 % 3
+1
+>>> 7 % 2
+7 % 2
+1
+>>> 8 % 2
+8 % 2
+0
+>>> 7 ／／ 2
+7    2
+  File "<stdin>", line 1
+    7    2
+         ^
+SyntaxError: invalid syntax
+>>> 7 // 2
+7 // 2
+3
+>>> 5 // 2
+5 // 2
+2
+>>> exit()
+exit()
+bash-3.2$ cp
+cp
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory
+bash-3.2$ cp test.py Median.py
+cp test.py Median.py
+bash-3.2$ ls
+ls
+#test.py#		Guess.py		Median.py
+GameBattleship.py	Mask.py			test.py
+GameBattleship.py~	Mask.py~		test.py~
+bash-3.2$ cp test.py Grades.py
+cp test.py Grades.py
+bash-3.2$ ls
+ls
+GameBattleship.py	Guess.py		Median.py
+GameBattleship.py~	Mask.py			test.py
+Grades.py		Mask.py~		test.py~
+bash-3.2$ dev_appserver.py main.py 
+
+bash-3.2$ bash-3.2$ dev_appserver.py main.py 
+bash-3.2$ dev_appserver.py main.py 
+bash: bash-3.2$: command not found
+bash-3.2$ dev_appserver.py main.py/
+dev_appserver.py main.py/
+bash: dev_appserver.py: command not found
+bash-3.2$ pip
+pip
+bash: pip: command not found
+bash-3.2$ test.py
+test.py
+bash: test.py: command not found
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 1, in <module>
+    class Author(Objet):
+NameError: name 'Objet' is not defined
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 1, in <module>
+    class Author(Objcet):
+NameError: name 'Objcet' is not defined
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 6, in <module>
+    My_Author = Author(22,33)
+TypeError: object() takes no parameters
+bash-3.2$ python test.py
+python test.py
+11
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 6, in <module>
+    My_Author = Author(Var1 = 22, Var2 = 33)
+TypeError: object() takes no parameters
+bash-3.2$ python test.py
+python test.py
+<function Set_defaul at 0x103e507d0>
+bash-3.2$ python test.py
+python test.py
+Default value here
+bash-3.2$ python test.py
+python test.py
+not again
+bash-3.2$ python test.py
+python test.py
+Default value here
+not again
+bash-3.2$ python test.py
+python test.py
+Default value here
+not again
+Traceback (most recent call last):
+  File "test.py", line 15, in <module>
+    My_Author = BasAuthor(memb1='3',memb2='3')
+TypeError: __init__() got an unexpected keyword argument 'memb1'
+bash-3.2$ python test.py
+python test.py
+Default value here
+not again
+Traceback (most recent call last):
+  File "test.py", line 10, in <module>
+    my_first_author = Author(var1 = '33', var2 = '44')
+TypeError: object() takes no parameters
+bash-3.2$ python test.py
+python test.py
+  File "test.py", line 6
+    Class Author(object):
+               ^
+SyntaxError: invalid syntax
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 10, in <module>
+    my_first_author = Author(D1 = '44')
+TypeError: object() takes no parameters
+bash-3.2$ python
+python
+Python 2.7.5 (default, Mar  9 2014, 22:15:05) 
+[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> type(123) is int
+type(123) is int
+True
+>>> isinstance(123,int)
+isinstance(123,int)
+True
+>>> python test.py
+python test.py
+  File "<stdin>", line 1
+    python test.py
+              ^
+SyntaxError: invalid syntax
+>>> python test.py
+python test.py
+  File "<stdin>", line 1
+    python test.py
+              ^
+SyntaxError: invalid syntax
+>>> python test.py
+python test.py
+  File "<stdin>", line 1
+    python test.py
+              ^
+SyntaxError: invalid syntax
+>>> exit()
+exit()
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 5, in <module>
+    c = TTT()
+TypeError: __init__() takes exactly 2 arguments (1 given)
+bash-3.2$ python test.py
+python test.py
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+{'__dict__': <attribute '__dict__' of 'TTT' objects>, '__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x10cb97c08>}
+bash-3.2$ python test.py
+python test.py
+{'__dict__': <attribute '__dict__' of 'TTT' objects>, '__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x108ffbc08>}
+{'__dict__': <attribute '__dict__' of 'TTT' objects>, '__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x108ffbc08>}
+bash-3.2$ python test.py
+python test.py
+{'__dict__': <attribute '__dict__' of 'TTT' objects>, '__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x102db6c08>}
+{'__dict__': <attribute '__dict__' of 'TTT' objects>, '__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x102db6c08>}
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+{'__module__': '__main__', 'mem': 1, '__dict__': <attribute '__dict__' of 'TTT' objects>, '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': None, '__init__': <function __init__ at 0x10117ec08>}
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+{'__module__': '__main__', 'mem': 1, '__dict__': <attribute '__dict__' of 'TTT' objects>, '__weakref__': <attribute '__weakref__' of 'TTT' objects>, '__doc__': 'Doc of TTT', '__init__': <function __init__ at 0x104265c08>}
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+Traceback (most recent call last):
+  File "test.py", line 9, in <module>
+    print c.__slots__
+AttributeError: 'TTT' object has no attribute '__slots__'
+bash-3.2$ python test.py
+python test.py
+{'var': 1}
+Traceback (most recent call last):
+  File "test.py", line 9, in <module>
+    print c.__slots__
+AttributeError: 'TTT' object has no attribute '__slots__'
+bash-3.2$ python
+python
+Python 2.7.5 (default, Mar  9 2014, 22:15:05) 
+[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import test
+import test
+>>> a = Person()
+a = Person()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Person' is not defined
+>>> test.__dict__
+test.__dict__
+{'Person': <class 'test.Person'>, '__builtins__': {'bytearray': <type 'bytearray'>, 'IndexError': <type 'exceptions.IndexError'>, 'all': <built-in function all>, 'help': Type help() for interactive help, or help(object) for help about object., 'vars': <built-in function vars>, 'SyntaxError': <type 'exceptions.SyntaxError'>, 'unicode': <type 'unicode'>, 'UnicodeDecodeError': <type 'exceptions.UnicodeDecodeError'>, 'memoryview': <type 'memoryview'>, 'isinstance': <built-in function isinstance>, 'copyright': Copyright (c) 2001-2013 Python Software Foundation.
+All Rights Reserved.
+
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved., 'NameError': <type 'exceptions.NameError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'dict': <type 'dict'>, 'input': <built-in function input>, 'oct': <built-in function oct>, 'bin': <built-in function bin>, 'SystemExit': <type 'exceptions.SystemExit'>, 'StandardError': <type 'exceptions.StandardError'>, 'format': <built-in function format>, 'repr': <built-in function repr>, 'sorted': <built-in function sorted>, 'False': False, 'RuntimeWarning': <type 'exceptions.RuntimeWarning'>, 'list': <type 'list'>, 'iter': <built-in function iter>, 'reload': <built-in function reload>, 'Warning': <type 'exceptions.Warning'>, '__package__': None, 'round': <built-in function round>, 'dir': <built-in function dir>, 'cmp': <built-in function cmp>, 'set': <type 'set'>, 'bytes': <type 'str'>, 'reduce': <built-in function reduce>, 'intern': <built-in function intern>, 'issubclass': <built-in function issubclass>, 'Ellipsis': Ellipsis, 'EOFError': <type 'exceptions.EOFError'>, 'locals': <built-in function locals>, 'BufferError': <type 'exceptions.BufferError'>, 'slice': <type 'slice'>, 'FloatingPointError': <type 'exceptions.FloatingPointError'>, 'sum': <built-in function sum>, 'getattr': <built-in function getattr>, 'abs': <built-in function abs>, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'print': <built-in function print>, 'True': True, 'FutureWarning': <type 'exceptions.FutureWarning'>, 'ImportWarning': <type 'exceptions.ImportWarning'>, 'None': None, 'hash': <built-in function hash>, 'ReferenceError': <type 'exceptions.ReferenceError'>, 'len': <built-in function len>, 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information., 'frozenset': <type 'frozenset'>, '__name__': '__builtin__', 'ord': <built-in function ord>, 'super': <type 'super'>, '_': None, 'TypeError': <type 'exceptions.TypeError'>, 'license': Type license() to see the full license text, 'KeyboardInterrupt': <type 'exceptions.KeyboardInterrupt'>, 'UserWarning': <type 'exceptions.UserWarning'>, 'filter': <built-in function filter>, 'range': <built-in function range>, 'staticmethod': <type 'staticmethod'>, 'SystemError': <type 'exceptions.SystemError'>, 'BaseException': <type 'exceptions.BaseException'>, 'pow': <built-in function pow>, 'RuntimeError': <type 'exceptions.RuntimeError'>, 'float': <type 'float'>, 'MemoryError': <type 'exceptions.MemoryError'>, 'StopIteration': <type 'exceptions.StopIteration'>, 'globals': <built-in function globals>, 'divmod': <built-in function divmod>, 'enumerate': <type 'enumerate'>, 'apply': <built-in function apply>, 'LookupError': <type 'exceptions.LookupError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'basestring': <type 'basestring'>, 'UnicodeError': <type 'exceptions.UnicodeError'>, 'zip': <built-in function zip>, 'hex': <built-in function hex>, 'long': <type 'long'>, 'next': <built-in function next>, 'ImportError': <type 'exceptions.ImportError'>, 'chr': <built-in function chr>, 'xrange': <type 'xrange'>, 'type': <type 'type'>, '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", 'Exception': <type 'exceptions.Exception'>, 'tuple': <type 'tuple'>, 'UnicodeTranslateError': <type 'exceptions.UnicodeTranslateError'>, 'reversed': <type 'reversed'>, 'UnicodeEncodeError': <type 'exceptions.UnicodeEncodeError'>, 'IOError': <type 'exceptions.IOError'>, 'hasattr': <built-in function hasattr>, 'delattr': <built-in function delattr>, 'setattr': <built-in function setattr>, 'raw_input': <built-in function raw_input>, 'SyntaxWarning': <type 'exceptions.SyntaxWarning'>, 'compile': <built-in function compile>, 'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'str': <type 'str'>, 'property': <type 'property'>, 'GeneratorExit': <type 'exceptions.GeneratorExit'>, 'int': <type 'int'>, '__import__': <built-in function __import__>, 'KeyError': <type 'exceptions.KeyError'>, 'coerce': <built-in function coerce>, 'PendingDeprecationWarning': <type 'exceptions.PendingDeprecationWarning'>, 'file': <type 'file'>, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, 'unichr': <built-in function unichr>, 'id': <built-in function id>, 'OSError': <type 'exceptions.OSError'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'min': <built-in function min>, 'UnicodeWarning': <type 'exceptions.UnicodeWarning'>, 'execfile': <built-in function execfile>, 'any': <built-in function any>, 'complex': <type 'complex'>, 'bool': <type 'bool'>, 'ValueError': <type 'exceptions.ValueError'>, 'NotImplemented': NotImplemented, 'map': <built-in function map>, 'buffer': <type 'buffer'>, 'max': <built-in function max>, 'object': <type 'object'>, 'TabError': <type 'exceptions.TabError'>, 'callable': <built-in function callable>, 'ZeroDivisionError': <type 'exceptions.ZeroDivisionError'>, 'eval': <built-in function eval>, '__debug__': True, 'IndentationError': <type 'exceptions.IndentationError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'classmethod': <type 'classmethod'>, 'UnboundLocalError': <type 'exceptions.UnboundLocalError'>, 'NotImplementedError': <type 'exceptions.NotImplementedError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'OverflowError': <type 'exceptions.OverflowError'>}, '__file__': 'test.py', '__package__': None, 'Descriptor': <class 'test.Descriptor'>, '__name__': 'test', '__doc__': None}
+>>>     for supporting Python development.  See www.python.org for more information., 'frozenset': <type 'frozenset'>, '__name__': '__builtin__', 'ord': <built-in function ord>, 'super': <type 'super'>, '_': None, 'TypeError': <type 'exceptions.TypeError'>, 'license': Type license() to see the full license text, 'KeyboardInterrupt': <type 'exceptions.KeyboardInterrupt'>, 'UserWarning': <type 'exceptions.UserWarning'>, 'filter': <built-in function filter>, 'range': <built-in function range>, 'staticmethod': <type 'staticmethod'>, 'SystemError': <type 'exceptions.SystemError'>, 'BaseException': <type 'exceptions.BaseException'>, 'pow': <built-in function pow>, 'RuntimeError': <type 'exceptions.RuntimeError'>, 'float': <type 'float'>, 'MemoryError': <type 'exceptions.MemoryError'>, 'StopIteration': <type 'exceptions.StopIteration'>, 'globals': <built-in function globals>, 'divmod': <built-in function divmod>, 'enumerate': <type 'enumerate'>, 'apply': <built-in function apply>, 'LookupError': <type 'exceptions.LookupError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'basestring': <type 'basestring'>, 'UnicodeError': <type 'exceptions.UnicodeError'>, 'zip': <built-in function zip>, 'hex': <built-in function hex>, 'long': <type 'long'>, 'next': <built-in function next>, 'ImportError': <type 'exceptions.ImportError'>, 'chr': <built-in function chr>, 'xrange': <type 'xrange'>, 'type': <type 'type'>, '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", 'Exception': <type 'exceptions.Exception'>, 'tuple': <type 'tuple'>, 'UnicodeTranslateError': <type 'exceptions.UnicodeTranslateError'>, 'reversed': <type 'reversed'>, 'UnicodeEncodeError': <type 'exceptions.UnicodeEncodeError'>, 'IOError': <type 'exceptions.IOError'>, 'hasattr': <built-in function hasattr>, 'delattr': <built-in function delattr>, 'setattr': <built-in function setattr>, 'raw_input': <built-in function raw_input>, 'SyntaxWarning': <type 'exceptions.SyntaxWarning'>, 'compile': <built-in function compile>, 'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'str': <type 'str'>, 'property': <type 'property'>, 'GeneratorExit': <type 'exceptions.GeneratorExit'>, 'int': <type 'int'>, '__import__': <built-in function __import__>, 'KeyError': <type 'exceptions.KeyError'>, 'coerce': <built-in function coerce>, 'PendingDeprecationWarning': <type 'exceptions.PendingDeprecationWarning'>, 'file': <type 'file'>, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, 'unichr': <built-in function unichr>, 'id': <built-in function id>, 'OSError': <type 'exceptions.OSError'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'min': <built-in function min>, 'UnicodeWarning': <type 'exceptions.UnicodeWarning'>, 'execfile': <built-in function execfile>, 'any': <built-in function any>, 'complex': <type 'complex'>, 'bool': <type 'bool'>, 'ValueError': <type 'exceptions.ValueError'>, 'NotImplemented': NotImplemented, 'map': <built-in function map>, 'buffer': <type 'buffer'>, 'max': <built-in function max>, 'object': <type 'object'>, 'TabError': <type 'exceptions.TabError'>, 'callable': <built-in function callable>, 'ZeroDivisionError': <type 'exceptions.ZeroDivisionError'>, 'eval': <built-in function eval>, '__debug__': True, 'IndentationError': <type 'exceptions.IndentationError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'classmethod': <type 'classmethod'>, 'UnboundLocalError': <type 'exceptions.UnboundLocalError'>, 'NotImplementedError': <type 'exceptions.NotImplementedError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'OverflowError': <type 'exceptions.OverflowError'>}, '__file__': 'test.py', '__package__': None, 'Descriptor': <class 'test.Descriptor'>, '__name__': 'test', '__doc__': None}
+    for supporting Python development.  See www.python.org for more information., 'frozenset': <type 'frozenset'>, '__name__': '__builtin__', 'ord': <built-in function ord>, 'super': <type 'super'>, '_': None, 'TypeError': <type 'exceptions.TypeError'>, 'license': Type license() to see the full license text, 'KeyboardInterrupt': <type 'exceptions.KeyboardInterrupt'>, 'UserWarning': <type 'exceptions.UserWarning'>, 'filter': <built-in function filter>, 'range': <built-in function range>, 'staticmethod': <type 'staticmethod'>, 'SystemError': <type 'exceptions.SystemError'>, 'BaseException': <type 'exceptions.BaseException'>, 'pow': <built-in function pow>, 'RuntimeError': <type 'exceptions.RuntimeError'>, 'float': <type 'float'>, 'MemoryError': <type 'exceptions.MemoryError'>, 'StopIteration': <type 'exceptions.StopIteration'>, 'globals': <built-in function globals>, 'divmod': <built-in function divmod>, 'enumerate': <type 'enumerate'>, 'apply': <built-in function apply>, 'LookupError': <type 'exceptions.LookupError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'basestring': <type 'basestring'>, 'UnicodeError': <type 'exceptions.UnicodeError'>, 'zip': <built-in function zip>, 'hex': <built-in function hex>, 'long': <type 'long'>, 'next': <built-in function next>, 'ImportError': <type 'exceptions.ImportError'>, 'chr': <built-in function chr>, 'xrange': <type 'xrange'>, 'type': <type 'type'>, '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", 'Exception': <type 'exceptions.Exception'>, 'tuple': <type 'tuple'>, 'UnicodeTranslateError': <type 'exceptions.UnicodeTranslateError'>, 'reversed': <type 'reversed'>, 'UnicodeEncodeError': <type 'exceptions.UnicodeEncodeError'>, 'IOError': <type 'exceptions.IOError'>, 'hasattr': <built-in function hasattr>, 'delattr': <built-in function delattr>, 'setattr': <built-in function setattr>, 'raw_input': <built-in function raw_input>, 'SyntaxWarning': <type 'exceptions.SyntaxWarning'>, 'compile': <built-in function compile>, 'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'str': <type 'str'>, 'property': <type 'property'>, 'GeneratorExit': <type 'exceptions.GeneratorExit'>, 'int': <type 'int'>, '__import__': <built-in function __import__>, 'KeyError': <type 'exceptions.KeyError'>, 'coerce': <built-in function coerce>, 'PendingDeprecationWarning': <type 'exceptions.PendingDeprecationWarning'>, 'file': <type 'file'>, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, 'unichr': <built-in function unichr>, 'id': <built-in function id>, 'OSError': <type 'exceptions.OSError'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'min': <built-in function min>, 'UnicodeWarning': <type 'exceptions.UnicodeWarning'>, 'execfile': <built-in function execfile>, 'any': <built-in function any>, 'complex': <type 'complex'>, 'bool': <type 'bool'>, 'ValueError': <type 'exceptions.ValueError'>, 'NotImplemented': NotImplemented, 'map': <built-in function map>, 'buffer': <type 'buffer'>, 'max': <built-in function max>, 'object': <type 'object'>, 'TabError': <type 'exceptions.TabError'>, 'callable': <built-in function callable>, 'ZeroDivisionError': <type 'exceptions.ZeroDivisionError'>, 'eval': <built-in function eval>, '__debug__': True, 'IndentationError': <type 'exceptions.IndentationError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'classmethod': <type 'classmethod'>, 'UnboundLocalError': <type 'exceptions.UnboundLocalError'>, 'NotImplementedError': <type 'exceptions.NotImplementedError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'OverflowError': <type 'exceptions.OverflowError'>}, '__file__': 'test.py', '__package__': None, 'Descriptor': <class 'test.Descriptor'>, '__name__': 'test', '__doc__': None}
+  File "<stdin>", line 1
+    for supporting Python development.  See www.python.org for more information., 'frozenset': <type 'frozenset'>, '__name__': '__builtin__', 'ord': <built-in function ord>, 'super': <type 'super'>, '_': None, 'TypeError': <type 'exceptions.TypeError'>, 'license': Type license() to see the full license text, 'KeyboardInterrupt': <type 'exceptions.KeyboardInterrupt'>, 'UserWarning': <type 'exceptions.UserWarning'>, 'filter': <built-in function filter>, 'range': <built-in function range>, 'staticmethod': <type 'staticmethod'>, 'SystemError': <type 'exceptions.SystemError'>, 'BaseException': <type 'exceptions.BaseException'>, 'pow': <built-in function pow>, 'RuntimeError': <type 'exceptions.RuntimeError'>, 'float': <type 'float'>, 'MemoryError': <type 'exceptions.MemoryError'>, 'StopIteration': <type 'exceptions.StopIteration'>, 'globals': <built-in function globals>, 'divmod': <built-in function divmod>, 'enumerate': <type 'enumerate'>, 'apply': <built-in function apply>, 'LookupError': <type 'exceptions.LookupError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'basestring': <type 'basestring'>, 'UnicodeError': <type 'exceptions.UnicodeError'>, 'zip': <built-in function zip>, 'hex': <built-in function hex>, 'long': <type 'long'>, 'next': <built-in function next>, 'ImportError': <type 'exceptions.ImportError'>, 'chr': <built-in function chr>, 'xrange': <type 'xrange'>, 'type': <type 'type'>, '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", 'Exception': <type 'exceptions.Exception'>, 'tuple': <type 'tuple'>, 'UnicodeTranslateError': <type 'exceptions.UnicodeTranslateError'>, 'reversed': <type 'reversed'>, 'UnicodeEncodeError': <type 'exceptions.UnicodeEncodeError'>, 'IOError': <type 'exceptions.IOError'>, 'hasattr': <built-in function hasattr>, 'delattr': <built-in function delattr>, 'setattr': <built-in function setattr>, 'raw_input': <built-in function raw_input>, 'SyntaxWarning': <type 'exceptions.SyntaxWarning'>, 'compile': <built-in function compile>, 'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'str': <type 'str'>, 'property': <type 'property'>, 'GeneratorExit': <type 'exceptions.GeneratorExit'>, 'int': <type 'int'>, '__import__': <built-in function __import__>, 'KeyError': <type 'exceptions.KeyError'>, 'coerce': <built-in function coerce>, 'PendingDeprecationWarning': <type 'exceptions.PendingDeprecationWarning'>, 'file': <type 'file'>, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, 'unichr': <built-in function unichr>, 'id': <built-in function id>, 'OSError': <type 'exceptions.OSError'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'min': <built-in function min>, 'UnicodeWarning': <type 'exceptions.UnicodeWarning'>, 'execfile': <built-in function execfile>, 'any': <built-in function any>, 'complex': <type 'complex'>, 'bool': <type 'bool'>, 'ValueError': <type 'exceptions.ValueError'>, 'NotImplemented': NotImplemented, 'map': <built-in function map>, 'buffer': <type 'buffer'>, 'max': <built-in function max>, 'object': <type 'object'>, 'TabError': <type 'exceptions.TabError'>, 'callable': <built-in function callable>, 'ZeroDivisionError': <type 'exceptions.ZeroDivisionError'>, 'eval': <built-in function eval>, '__debug__': True, 'IndentationError': <type 'exceptions.IndentationError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'classmethod': <type 'classmethod'>, 'UnboundLocalError': <type 'exceptions.UnboundLocalError'>, 'NotImplementedError': <type 'exceptions.NotImplementedError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'OverflowError': <type 'exceptions.OverflowError'>}, '__file__': 'test.py', '__package__': None, 'Descriptor': <class 'test.Descriptor'>, '__name__': 'test', '__doc__': None}
+    ^
+IndentationError: unexpected indent
+>>> a test.Person()
+a test.Person()
+  File "<stdin>", line 1
+    a test.Person()
+         ^
+SyntaxError: invalid syntax
+>>> from test import *
+from test import *
+>>> a = Person()
+a = Person()
+>>> a.__dict__
+a.__dict__
+{}
+>>> a.name = 'edward'
+a.name = 'edward'
+>>> a.name
+a.name
+'Edward'
+>>> from test import *
+from test import *
+>>> a.name 
+a.name 
+'Edward'
+>>> del a
+del a
+>>> a.name
+a.name
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a = Person()
+a = Person()
+>>> a.name = 'edward'
+a.name = 'edward'
+>>> b = Person()
+b = Person()
+>>> b.name
+b.name
+'Edward'
+>>> b
+b
+<test.Person object at 0x1034377d0>
+>>> del a
+del a
+>>> del b
+del b
+>>> from test import *
+from test import *
+>>> a = Person()
+a = Person()
+>>> a.name = 'edward'
+a.name = 'edward'
+>>> a.name
+a.name
+'Edward'
+>>> b
+b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'b' is not defined
+>>> b = Person()
+b = Person()
+>>> b.name
+b.name
+'Edward'
+>>> c = Person()
+c = Person()
+>>> c.name
+c.name
+'Edward'
+>>> exit()
+exit()
+bash-3.2$ python test.py
+python test.py
+bash-3.2$ python test.py
+python test.py
+  File "test.py", line 22
+    pring a.name
+          ^
+SyntaxError: invalid syntax
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 22, in <module>
+    print a.name
+  File "test.py", line 7, in __get__
+    return instance.d_name
+AttributeError: 'Person' object has no attribute 'd_name'
+bash-3.2$ python test.py
+python test.py
+
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 23, in <module>
+    a = Person(name='edwar')
+  File "test.py", line 17, in __init__
+    self.kwargs[key] = kwargs[key]
+AttributeError: 'Person' object has no attribute 'kwargs'
+bash-3.2$ python test.py
+python test.py
+
+bash-3.2$ python test.py
+python test.py
+  File "test.py", line 18
+    self.__dict___(key) = kwargs(key)
+SyntaxError: can't assign to function call
+bash-3.2$ python test.py
+python test.py
+Traceback (most recent call last):
+  File "test.py", line 24, in <module>
+    a = Person(name='edwar')
+  File "test.py", line 18, in __init__
+    self.__dict___[key] = kwargs[key]
+AttributeError: 'Person' object has no attribute '__dict___'
+bash-3.2$ python test.py
+python test.py
+
+bash-3.2$ python test.py
+python test.py
+{'name': 'edwar'}
+bash-3.2$ 

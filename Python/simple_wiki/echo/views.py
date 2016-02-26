@@ -4,6 +4,12 @@ from django.http import HttpResponse
 from wechat.official import WxApplication, WxTextResponse
 from django.views.decorators.csrf import csrf_exempt
 
+#Append "Echo: " text before every echo
+class WxTextResponseLocal(WxTextResponse):
+    def __init__(self, text, request):
+        super(WxTextResponseLocal, self).__init__(text, request)
+        self.text = 'Echo: ' + self.text 
+
 class EchoApp(WxApplication):
     """把用户输入的文本原样返回。
     """
@@ -13,7 +19,11 @@ class EchoApp(WxApplication):
     ENCODING_AES_KEY = 'Egw2nZfAWc7surm80mHL6lOcLDHLAOKWysR2H4vJjMv'
 
     def on_text(self, req):
-        return WxTextResponse(req.Content, req)
+        #Original response
+        #return WxTextResponse(req.Content, req)
+        
+        #Overrided Response
+        return WxTextResponseLocal(req.Content, req)
 
 @csrf_exempt
 def wechat(request):

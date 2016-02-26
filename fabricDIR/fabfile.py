@@ -7,10 +7,10 @@ env.hosts = ['root@120.24.178.213:22',] #ssh要用的参数， 默认端口22
 
 env.password = 'Lwb8930545@#$'
 
-def test():
+def rungunicorn():
     
     with cd('~/simple_wiki/'):
-        run("gunicorn -w4 -b0.0.0.0:8000 simple_wiki.wsgi")
+        run("nohup gunicorn -w4 -b0.0.0.0:8000 simple_wiki.wsgi &")
 
 def runps():
     run("ps -fA | grep work")

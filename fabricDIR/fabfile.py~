@@ -10,7 +10,7 @@ env.password = 'Lwb8930545@#$'
 def test():
     
     with cd('~/simple_wiki/'):
-        run("gunicorn -w4 -b0.0.0.0:80 simple_wiki.wsgi")
+        run("gunicorn -w4 -b0.0.0.0:8000 simple_wiki.wsgi")
 
 def runps():
     run("ps -fA | grep work")

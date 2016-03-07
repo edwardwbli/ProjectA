@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 –*-
 # Create your views here.
 from django.http import HttpResponse
-from wechat.official import WxApplication, WxTextResponse
+from wechat.official import WxApplication, WxTextResponse, WxImageResponse
 from django.views.decorators.csrf import csrf_exempt
 
 #Append "Echo: " text before every echo
@@ -24,7 +24,10 @@ class EchoApp(WxApplication):
         
         #Overrided Response
         return WxTextResponseLocal(req.Content, req)
-
+    
+    def on_image(self, req):
+        return WxImageResponse(req.MediaId, req)  
+        
 @csrf_exempt
 def wechat(request):
     # 微信配置验证代码
@@ -38,6 +41,7 @@ def wechat(request):
 
     #Echo testing 
     app = EchoApp()
+    print request.body
     result = app.process(request.GET, request.body)
-    
+    print result
     return HttpResponse(result)

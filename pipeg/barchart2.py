@@ -57,6 +57,7 @@ class TextBarRenderer:
 
 
     def draw_caption(self, caption):
+        #^ means for centralize, detail usage please refer format document.
         print("{0:^{2}}\n{1:^{2}}".format(caption, "=" * len(caption),
                 self.scaleFactor))
 

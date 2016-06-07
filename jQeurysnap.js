@@ -12,3 +12,8 @@ jQeury snap
 <div id="result">
 </div>
 ###
+#jQuery Get web page, and insert response into  tag with class .result.
+$.get( "ajax/test.html", function( data ) {
+  $( ".result" ).html( data );
+  alert( "Load was performed." );
+});

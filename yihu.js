@@ -201,3 +201,202 @@ $.createUrl = function(param,old_url){
     return _url;
 };
 
+$(function () {
+    var isAtBtnPageto;
+    $('html').on('mouseenter','.btn-pageto', function () {
+        isAtBtnPageto = !0;
+    });
+    $('html').on('mouseleave', '.btn-pageto',function () {
+        isAtBtnPageto = !1;
+    });
+    $("html").delegate(".input-pageto", "focus", function () {
+        $(this).parent().addClass("pageto-focus");
+    }).delegate(".input-pageto", "blur", function (e) {
+        isAtBtnPageto || $(this).parent().removeClass("pageto-focus");
+    });
+
+    //自定义跳转页面
+    window.pageToUrl = function () {
+        var _page_num = parseInt($('#pageToNum').val());
+        var _page_count = parseInt($('#pageWidget').attr('data-count'));
+        if (_page_num > _page_count) {
+            _page_num = _page_count;
+        }
+        var param = [{'key': 'page', 'value': _page_num}];
+        var _url = $.createUrl(param,now_doc_list_url);
+        doGetDoctorList(_url);
+    };
+});
+
+//ajax加载医院列表
+var doGetDoctorList = function(url){
+    var _url = url;
+    var _data = {};
+    var _success = function (res) {
+        $('#ajaxDoctorList').html(res);
+         //改变自定义跳转的HTML
+        var html = '<input class="btn-pageto" type="button" value="确定" onclick="pageToUrl()">';
+        $('.btn-pageto').replaceWith(html);
+        window.now_doc_list_url =  _url;
+        //对医生图片错误进行过滤
+        checkImgError();
+        //加载当日的医生排班
+        $('html').trigger("arrange:getList");
+    };
+    var _error = function(){
+        $.alert('系统超时，请稍后重试');
+        $('#ajaxDoctorList').html('<div class=" c-hidden c-t-center c-f18 pt50 pb50">\
+        <span class="icon icon-list"></span>暂无相关医生\
+    </div>');
+    };
+    
+    var _beforesend = function(){
+        $('#ajaxDoctorList').html('<div class=" c-hidden c-t-center c-f18 pt50 pb50">\
+                <img src="/v3/images/loading/2.gif"/>\
+                数据加载中，请稍候...\
+        </div>');
+    };
+    $.ajax({
+        'url':_url,
+        'data':_data,
+        'timeout':8000,
+        'type':'post',
+        'async':true,
+        'beforeSend':_beforesend,
+        'success':_success,
+        'error':_error
+    });
+};
+
+//鼠标移过医生列表发生的动作
+$(function () {
+    $("html").on('mouseenter','.doc-results>li',function () {
+        $(this).addClass("hover");
+    });
+    $("html").on('mouseleave','.doc-results>li',function () {
+        $(this).removeClass("hover");
+    });
+    //弹出擅长的详细
+    $('html').on('mouseover','[data-tip]', function () {
+        if (!$('.tooltip').length) {
+            setDOM(this);
+        } else {
+            $('.tooltip').find('.pop-info-txt').html('<span class="c-bold">擅长：</span>' + $(this).attr('data-tip'));
+        }
+        $(this).on('mousemove', function (e) {
+            var posX = e.pageX, posY = e.pageY;
+            $('.tooltip').css({
+                left: posX + 12,
+                top: posY - $(this).outerHeight(true) / 2
+            }).stop(true, true).fadeIn();
+        });
+    }).on('mouseout', function (e) {
+        $('.tooltip').hide();
+    });
+
+    function setDOM(ele) {
+        var tempStr = '';
+        tempStr += '<div class="pop-info-txt"><span class="c-bold">擅长：</span>' + $(ele).attr('data-tip') + '</div>';
+        $('<div>').addClass('tooltip').html(tempStr).prependTo('body');
+    }
+    ;
+});
+
+//AJAX获取本医生当日挂号状态
+$(function () {
+    var old_boaed_html = '';
+    $('html').bind("arrange:getList",function(){
+        var doctor_list = $('.doctor-arrange-list');
+        var sns = '';
+        //获取医生sns列表
+        doctor_list.each(function(){
+            if(sns!=''){
+                sns += ',';
+            }
+            sns += parseInt($(this).attr('data-sn'));
+        });
+        var _url = '/DoctorArrange/doGetAllRegListBySns';
+        var _data = {'sns': sns, 'hospital_id': hospitalId};
+        var _success = function (res) {
+            if(res==''){
+                $('.doctor-arrange-list').html('');
+                return false;
+            }
+            for(var i=0; i<res.length; i++){
+                var info = res[i];
+                var sn = info['sn'];
+                var html = info['html'];
+                var _doctor = $('.doctor-arrange-list[data-sn='+sn+']');
+                _doctor.html(html);
+                if (_doctor.find('li').size() > 5) {
+                    _doctor.parent().before('\
+                        <div class="carousel-prev" onclick="Carousel(this,1,0,3)"  style="display: none;" ><i class="left-button-image"></i></div>\
+                        <div class="carousel-next" onclick="Carousel(this,0,1,3)"><i class="right-button-image"></i></div>');
+                }
+            }  
+        };
+        var _error = function(){
+            var _doctor = $('.doctor-arrange-list');
+            old_boaed_html = _doctor.eq(0).html();
+            var _html = "<li class='arrange_loading_err'>\
+                    <a href='javascript:;' class='doc-schedule-tz'>\
+                        <span class='doc-schedule-date'><em class='c-f16'>点击<br/>刷新</em></span>\
+                        <span class='doc-schedule-stat'>网络超时</span>\
+                    </a>\
+                </li>";
+            _doctor.html(_html);
+        };
+        $.myajax(_url, _data, _success,_error);
+        
+    });
+    
+    //点击重新加载
+    $(document).on('click','.arrange_loading_err',function(){
+        if(old_boaed_html!==''){
+            var _doctor = $('.doctor-arrange-list');
+            _doctor.html(old_boaed_html);
+        }
+       $('html').trigger("arrange:getList"); 
+    });
+    
+    //左右滚动
+    window.Carousel = function(obj, left, right, step) {
+        var $this = $(obj),
+                $carouselList = $this.siblings(".carousel-clip-region").find(".carousel-list"),
+                $carouselListLeft = $carouselList.css("left"),
+                $carouselItemsLength = $carouselList.children('li').length,
+                isLeft = left,
+                isRight = right,
+                step = step ? step : 3,
+                temp;
+        if (isLeft) {
+            if (!$this.siblings(".carousel-next").is(":visible"))
+                $this.siblings(".carousel-next").show();
+            temp = Math.floor(parseInt($carouselListLeft) / 95) * 95 + step * 95;
+            if (temp >= 0) {
+                $carouselList.stop().animate({left: 0}, 300);
+                $this.hide();
+            }
+            else
+                $carouselList.stop().animate({left: temp + "px"}, 300);
+        }
+        if (isRight) {
+            if (!$this.siblings(".carousel-prev").is(":visible"))
+                $this.siblings(".carousel-prev").show();
+            temp = Math.floor(parseInt($carouselListLeft) / 95) * 95;
+            if (Math.abs(temp - 5 * 95) >= $carouselItemsLength * 95) {
+                $this.hide();
+                return;
+            }
+            else {
+                temp = Math.floor(parseInt($carouselListLeft) / 95) * 95 - step * 95;
+                $carouselList.stop().animate({left: temp + "px"}, 300);
+                if (Math.abs(temp - 5 * 95) >= $carouselItemsLength * 95) {
+                    $this.hide();
+                }
+            }
+        }
+    };
+
+});
+

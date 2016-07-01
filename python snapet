@@ -60,3 +60,8 @@ def test():
 """
 if __name__ == '__main__':
     sys.exit(app.run(debug=True))
+
+#Scrapy form data
+frmdata = {"id": "com.supercell.boombeach", "reviewType": '0', "reviewSortOrder": '0', "pageNum":'0'}
+url = "https://play.google.com/store/getreviews"
+yield FormRequest(url, callback=self.parse, formdata=frmdata)

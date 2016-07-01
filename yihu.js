@@ -131,3 +131,73 @@
     };
     
 }();
+
+//封装一个ajax
+$.myajax = function (_url, _data, _success, _error, _loading) {
+    if (arguments[3] === void(0) || arguments[3] === '') {
+        //错误执行代码
+        _error = function () {
+        };
+    }
+    if (arguments[3] === void(0) || arguments[3] === '') {
+        //不显示等待
+        _loading = false;
+    }
+    //封装AJAX数据
+    var _ajax = {};
+    _ajax.url = _url;
+    _ajax.data = _data;
+    _ajax.timeout = 8000;
+    _ajax.type = 'post';
+    _ajax.async = true;
+    var myart = '';
+    //默认开始
+    _ajax.beforeSend = function () {
+        if (_loading) {
+            myart = $.loading("String"==typeof (_loading)?_loading:void(0));
+        }
+    };
+    //默认结束
+    _ajax.complete = function () {
+        if (_loading) {
+            myart.close();
+        }
+    };
+    //AJAX执行成功
+    _ajax.success = function (result) {
+        _success(result);
+    };
+    //ajax执行遇到错误
+    _ajax.error = function () {
+        _error();
+    };
+    $.ajax(_ajax);
+};
+
+ //在当前的URL上增加或者修改参数
+$.createUrl = function(param,old_url){
+    if(typeof old_url==='undefined'){
+        var _url = window.location.href;
+    }else{
+        var _url = old_url;
+    }
+    for(i=0;i<param.length;i++){
+        var _obj = param[i];
+        var _key = _obj.key;
+        var _value = _obj.value;
+        if(_url.indexOf(_key+'=')===-1){
+            if(_url.indexOf('?')===-1){
+                //没有任何get
+                _url +='?'+_key+'='+_value;
+            }else{
+                //有get
+                _url +='&'+_key+'='+_value;
+            }
+        }else{
+            var _reg = new RegExp(_key+'=([^&#.]*)');
+            _url = _url.replace(_reg, _key+'='+_value);
+        }
+    }
+    return _url;
+};
+

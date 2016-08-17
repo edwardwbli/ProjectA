@@ -65,3 +65,17 @@ if __name__ == '__main__':
 frmdata = {"id": "com.supercell.boombeach", "reviewType": '0', "reviewSortOrder": '0', "pageNum":'0'}
 url = "https://play.google.com/store/getreviews"
 yield FormRequest(url, callback=self.parse, formdata=frmdata)
+
+
+## Redis sample
+from flask import Flask
+from redis import Redis
+import os
+app = Flask(__name__)
+redis = Redis(host='redis', port=6379)
+@app.route('/')
+def hello():
+    redis.incr('hits')
+    return 'Hello World! I have been seen %s times.' % redis.get('hits')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)

@@ -1,0 +1,22 @@
+#Docker testing for Web app to access redis service 
+
+#Step1 start Redis
+sudo docker run --name myredis -d redis
+
+#Step2 start web server with connection with myredis
+$ sudo docker run --name myweb --link myredis:redis web/app /bin/bash
+
+#step3 start app.py with with below coding
+from flask import Flask
+from redis import Redis
+import os
+app = Flask(__name__)
+'''host should be container name , and port 
+you can type docker ps to check the PORTS and NAMES for the redis container running'''
+redis = Redis(host='myredis', port=6379)
+@app.route('/')
+def hello():
+    redis.incr('hits')
+    return 'Hello World! I have been seen %s times.' % redis.get('hits')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080 , debug=True)
